@@ -1,0 +1,44 @@
+
+/*=====LA APRTIE NAVBAR==========*/
+
+.navbar {
+  margin-bottom: 40px; /* Ajoutez de la marge en bas de la navbar */
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  align-items: center;
+  margin-top: auto;
+}
+
+.navbar-brand{
+  margin: 0 50px;
+
+}
+
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-login-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-login-container a {
+  margin-left: 20px;
+}
+
+.user-icon-container {
+  display: flex;
+  align-items: center;
+  margin-right:30px ;
+}
+
+.user-icon {
+  margin-right: 50px; /* Ajoutez une marge à gauche de l'icône utilisateur */
+}
+
+/* ======================= FIN DE LA NAVBAR ================ */
+
+
