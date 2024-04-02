@@ -1,550 +1,865 @@
 .home-page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-box-container {
+  width: 100%;
+  align-items: center; /* Centre le contenu verticalement */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-box {
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(10, 11, 10, 0.835);
+  border: 1px solid #313434;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-box:hover {
+  box-shadow: 0 0 20px 5px rgba(2, 163, 222, 0.986); /* Ajoute une ombre portée légère */
+  /*animation: pulse 1s infinite; /* Ajoute une légère pulsation lors du survol */
+}
+
+.hero-box.speak {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url("/assets/image/true.png"); /* Ajoutez le chemin vers votre première image */
+}
+
+.hero-box.listen {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url("/assets/image/tre.png"); /* Ajoutez le chemin vers votre deuxième image */
+}
+
+.hero-multiple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+.speak {
+  background: linear-gradient(to right, #5fc3e4, #e55d87);
+}
+
+.listen {
+  background: linear-gradient(to right, #e684ae, #79cbca, #77a1d3);
+}
+
+.title {
+  font-size: 3rem; /* Taille de police pour le titre */
+}
+
+.description {
+  font-size: 1.3rem; /* Taille de police pour la description */
+  margin-bottom: 2px; /* Marge en bas de la description */
+  margin-left: 30px;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f8;
+}
+
+.left-section {
+  flex: 1;
+  text-align: left;
+  text-decoration: dotted;
+}
+
+.right-section {
+  flex: 1;
+  text-align: left;
+}
+
+h1 {
+  font-family: Arial, sans-serif; /* Changer la police en Arial */
+  font-size: 30px; /* Modifier la taille de police */
+}
+
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.left-box {
+  position: absolute; /* Vous pouvez utiliser relative si la position doit être relative à son conteneur parent */
+  top: 0; /* Ajustez si nécessaire */
+  left: 0; /* Ajustez si nécessaire */
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  height: 100%; /* Ajustez la hauteur selon vos besoins */
+  background-color: #f0f0f0; /* Couleur de fond de la boîte */
+  padding: 20px; /* Ajoutez un remplissage pour l'espace intérieur */
+}
+
+@media screen and (max-width: 768px) {
+  .bottom-content {
+    flex-direction: column; /* Afficher les éléments en colonne */
+    align-items: stretch; /* Étirer les éléments pour remplir l'espace */
+  }
+
+  .left-section,
+  .right-section {
+    flex: none; /* Annuler la flexibilité pour chaque section */
+    width: 100%; /* Définir la largeur à 100% */
+    margin-bottom: 20px; /* Ajouter un espace entre les sections */
+  }
+}
+
+.left-section img {
+  max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
+  height: auto; /* La hauteur s'ajustera automatiquement pour préserver le ratio */
+}
+
+.stats .container {
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  margin: 0 auto; /* Pour centrer horizontalement */
+}
+
+.stats .container img {
+  margin-right: 20px; /* Ajustez selon vos besoins */
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Ajoute une transition douce à l'effet */
+}
+
+.stats .container img:hover {
+  transform: rotateX(10deg) rotateY(10deg); /* Applique une rotation 3D sur l'image */
+}
+
+.help {
+  width: 1380px;
+  height: 148.8px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: center;
+}
+
+.icon img {
+  width: 26px; /* Ajustez la taille de l'icône selon vos besoins */
+  height: 26.86px; /* Ajustez la taille de l'icône selon vos besoins */
+  margin-bottom: 0px 0px 4.8px; /* Espace entre l'icône et le texte */
+}
+
+.help .icon {
+  font-size: 36px; /* Augmenter la taille des icônes */
+}
+
+.icon span {
+  margin: 0 10px;
+  font-size: 24px; /* Augmenter la taille du texte */
+}
+
+.vertical-line {
+  height: 30px; /* Hauteur de votre trait vertical */
+  width: 1px; /* Largeur de votre trait vertical */
+  background-color: green; /* Couleur du trait vertical */
+  margin: 0 10px; /* Marge horizontale entre les traits */
+}
+
+.footer {
+  width: 1216px;
+  height: 366.39px;
+  background-color: yellow;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%; /* Utilisation de width au lieu de max-width */
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: 82.81px;
+  margin: 0px 128px 32px 0px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 96px;
+  height: 96px; /* Maintenir une forme carrée */
+  margin-right: 10px; /* Marge entre le logo et le texte */
+}
+
+.logo-text {
+  display: inline-block; /* Pour placer le texte à côté du logo */
+  vertical-align: middle; /* Pour aligner le texte verticalement avec le logo */
+  font-size: 20px; /* Taille de police légèrement plus petite */
+  font-family: "Open Sans", sans-serif;
+  margin-left: 5px; /* Espacement entre le logo et le texte */
+  white-space: nowrap; /* Pour empêcher le texte de se diviser sur plusieurs lignes */
+}
+
+/** ====================CSS DE LA PARTIE DE PAGE OUR TEAM==============*/
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.text-blk {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.inner-container {
+  max-width: 1320px;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 200px;
+}
+
+.card-container {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.heading-text {
+  font-size: 48px;
+  line-height: 65px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+.name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.team-member-image {
+  height: 230px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 270px;
+}
+
+.card {
+  display: block;
+}
+
+.position {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.swiper-slide {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.arrow-right {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1)
+    scaleZ(1);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  cursor: pointer;
+  height: 14px;
+  width: 24px;
+}
+
+.arrow-left {
+  height: 14px;
+  transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) scaleX(1) scaleY(1)
+    scaleZ(1);
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  flex-direction: row-reverse;
+}
+
+.swiper-pagination {
+  position: static;
+  text-align: left;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.team-swiper {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .inner-container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: center;
+  }
+
+  .card-container {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .swiper-slide {
+    justify-content: center;
+  }
+
+  .heading-text {
     text-align: center;
+  }
+
+  .swiper-pagination {
+    text-align: center;
+  }
+
+  .arrow-left {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .arrow-right {
+    height: 14px;
+  }
+
+  .swiper-slide.empty {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .inner-container {
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    align-items: flex-start;
+  }
+
+  .card-container {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .heading-text {
+    text-align: center;
+  }
+
+  .card-container {
+    align-items: flex-start;
+  }
+
+  .btn {
+    justify-content: flex-start;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  .arrow-left {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .team-member-image {
+    width: 240px;
+    height: 200px;
+  }
+
+  .outer-container {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .btn {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+  }
+}
+
+/*====================== CSS DE LA PARTIE NOTRE EQUIPE =====================*/
+.team-section {
+  display: flex;
+  justify-content: space-around; /* Pour aligner les membres de l'équipe horizontalement */
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+}
+
+.member-image {
+  width: 200px; /* Ajustez la taille de l'image selon vos besoins */
+  height: 200px;
+  border-radius: 50%; /* Pour arrondir l'image */
+  border: 5px solid #ddd; /* Bordure grise */
+}
+
+.member-name {
+  margin-top: 10px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 5px;
+  color: #333; /* Couleur des liens sociaux */
+  text-decoration: none;
+}
+
+/*===================== FIN DE LA PARTIE DE NOTRE EQUIPE ===================*/
+
+/** ======================FIN DE LA PARTIE DE CSS DE PAGR OUR TEAM==============*/
+
+/* =============================PARTIE POUR LES APPAREIL MOBILE ==================== */
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permettre le passage à la ligne des éléments enfants */
+  margin: 0px; /* Supprimer la marge pour éviter le débordement horizontal */
+}
+
+.stats .container img {
+  margin-right: 20px; /* Réduire la marge à droite pour espacer les images */
+  margin-bottom: 20px; /* Ajouter une marge en bas pour espacer les images */
+}
+
+.help {
+  width: 100%; /* Utiliser toute la largeur de l'écran */
+  padding: 20px; /* Ajouter un padding pour l'espace intérieur */
+  height: auto; /* Ajuster la hauteur automatiquement */
+  background-color: #ffffff;
+}
+
+.icon img {
+  width: 20px; /* Ajuster la taille de l'icône pour les petits écrans */
+  height: 20px; /* Ajuster la taille de l'icône pour les petits écrans */
+  margin-right: 10px; /* Réduire la marge à droite pour espacer les icônes */
+}
+
+.icon span {
+  font-size: 16px; /* Réduire la taille du texte pour les petits écrans */
+}
+
+.vertical-line {
+  display: none; /* Masquer la ligne verticale pour les petits écrans */
+}
+
+.footer {
+  padding: 10px; /* Réduire le padding pour les petits écrans */
+}
+
+.logo {
+  margin: 0; /* Supprimer la marge pour éviter le débordement horizontal */
+}
+
+.logo-img {
+  width: 50px; /* Ajuster la taille du logo pour les petits écrans */
+  height: auto; /* Ajuster la hauteur automatiquement */
+}
+
+.links ul {
+  list-style-type: none; /* Pour enlever les puces de la liste */
+  padding: 0; /* Pour enlever le padding par défaut */
+}
+
+.links li {
+  margin-bottom: 25px; /* Espacement entre chaque lien */
+}
+
+.links a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white; /* Couleur du lien */
+}
+
+.links a:hover {
+  color: blue; /* Changez la couleur au survol */
+}
+
+.sharing {
+  text-align: center;
+  color: blue;
+}
+
+.sharing .title {
+  width: 196px;
+  height: 36px;
+  margin: 0px 0px 16px;
+  font-size: 19px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.sharing .icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; /* Espacement entre la div title et les icônes */
+}
+
+.sharing .icons img {
+  width: 30px; /* Ajustez la taille des icônes selon vos besoins */
+  height: 30px; /* Ajustez la taille des icônes selon vos besoins */
+  margin: 0 10px; /* Espacement entre les icônes */
+}
+
+.input {
+  max-width: 190px;
+  padding: 15px;
+  font-size: 17px;
+  color: black;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border: 2px solid #fff;
+  margin-right: -10px;
+}
+
+.button {
+  border: none;
+  background-color: #1363df;
+  text-decoration: none;
+  padding: 15px;
+  padding-bottom: 17px;
+  font-size: 17px;
+  color: #fff;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  cursor: pointer;
+}
+
+.goal-title {
+  width: 300px;
+  height: 71.81px;
+  color: white;
+  font-size: 14px;
+  font-family: "open sans", sans-serif;
+  margin: 0px 0px 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
     display: flex;
     flex-direction: column;
-  }
-  
-  .hero-box-container {
-    width: 100%;
-    align-items: center; /* Centre le contenu verticalement */
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  .hero-box {
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(10, 11, 10, 0.835);
-    border: 1px solid #313434;
-    background-size: cover;
-    position: relative;
     align-items: center;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+    /*padding: 0px;*/
   }
-  
-  .hero-box:hover {
-    box-shadow: 0 0 20px 5px rgba(2, 163, 222, 0.986); /* Ajoute une ombre portée légère */
-    /*animation: pulse 1s infinite; /* Ajoute une légère pulsation lors du survol */
-  }
-  
-  .hero-box.speak {
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-image: url("/assets/image/true.png"); /* Ajoutez le chemin vers votre première image */
-  }
-  
-  .hero-box.listen {
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-image: url("/assets/image/tre.png"); /* Ajoutez le chemin vers votre deuxième image */
-  }
-  
-  .hero-multiple {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  button {
-    position: relative;
-    padding: 12px 35px;
-    background: #fec195;
-    font-size: 17px;
-    font-weight: 500;
-    color: #181818;
-    border: 3px solid #fec195;
-    border-radius: 8px;
-    box-shadow: 0 0 0 #fec1958c;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .star-1 {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-  }
-  
-  .star-2 {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-3 {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-4 {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-5 {
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
-  }
-  
-  .star-6 {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 0 #fffdef);
-    z-index: -5;
-    transition: all 0.8s ease;
-  }
-  
-  button:hover {
-    background: transparent;
-    color: #fec195;
-    box-shadow: 0 0 25px #fec1958c;
-  }
-  
-  button:hover .star-1 {
-    position: absolute;
-    top: -80%;
-    left: -30%;
-    width: 25px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  button:hover .star-2 {
-    position: absolute;
-    top: -25%;
-    left: 10%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  button:hover .star-3 {
-    position: absolute;
-    top: 55%;
-    left: 25%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  button:hover .star-4 {
-    position: absolute;
-    top: 30%;
-    left: 80%;
-    width: 8px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  button:hover .star-5 {
-    position: absolute;
-    top: 25%;
-    left: 115%;
-    width: 15px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  button:hover .star-6 {
-    position: absolute;
-    top: 5%;
-    left: 60%;
-    width: 5px;
-    height: auto;
-    filter: drop-shadow(0 0 10px #fffdef);
-    z-index: 2;
-  }
-  
-  .fil0 {
-    fill: #fffdef;
-  }
-  .speak {
-    background: linear-gradient(to right, #5fc3e4, #e55d87);
-  }
-  
-  .listen {
-    background: linear-gradient(to right, #e684ae, #79cbca, #77a1d3);
-  }
-  
-  .title {
-    font-size: 3rem; /* Taille de police pour le titre */
-  }
-  
-  .description {
-    font-size: 1.3rem; /* Taille de police pour la description */
-    margin-bottom: 2px; /* Marge en bas de la description */
-    margin-left: 30px;
-  }
-  
-  .bottom-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9f9f8;
-  }
-  
-  .left-section {
-    flex: 1;
-    text-align: left;
-    text-decoration: dotted;
-  }
-  
-  .right-section {
-    flex: 1;
-    text-align: left;
-  }
-  
-  h1 {
-    font-family: Arial, sans-serif; /* Changer la police en Arial */
-    font-size: 30px; /* Modifier la taille de police */
-  }
-  
-  p {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
-  
-  .left-box {
-    position: absolute; /* Vous pouvez utiliser relative si la position doit être relative à son conteneur parent */
-    top: 0; /* Ajustez si nécessaire */
-    left: 0; /* Ajustez si nécessaire */
-    width: 300px; /* Ajustez la largeur selon vos besoins */
-    height: 100%; /* Ajustez la hauteur selon vos besoins */
-    background-color: #f0f0f0; /* Couleur de fond de la boîte */
-    padding: 20px; /* Ajoutez un remplissage pour l'espace intérieur */
-  }
-  
-  @media screen and (max-width: 768px) {
-    .bottom-content {
-      flex-direction: column; /* Afficher les éléments en colonne */
-      align-items: stretch; /* Étirer les éléments pour remplir l'espace */
-    }
-  
-    .left-section,
-    .right-section {
-      flex: none; /* Annuler la flexibilité pour chaque section */
-      width: 100%; /* Définir la largeur à 100% */
-      margin-bottom: 20px; /* Ajouter un espace entre les sections */
-    }
-  }
-  
-  .left-section img {
-    max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
-    height: auto; /* La hauteur s'ajustera automatiquement pour préserver le ratio */
-  }
-  
-  
-  
-  
-  .stats .container {
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    margin: 0 auto; /* Pour centrer horizontalement */
-  }
-  
-  .stats .container img {
-    margin-right: 20px; /* Ajustez selon vos besoins */
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; /* Ajoute une transition douce à l'effet */
-  }
-  
-  .stats .container img:hover {
-    transform: rotateX(10deg) rotateY(10deg); /* Applique une rotation 3D sur l'image */
-  }
-  
-  
-  .help {
-    width: 1380px;
-    height: 148.8px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon {
-    display: flex;
-    /*flex-direction: column;*/
-    align-items: center;
-  }
-  
-  .icon img {
-    width: 26px; /* Ajustez la taille de l'icône selon vos besoins */
-    height: 26.86px; /* Ajustez la taille de l'icône selon vos besoins */
-    margin-bottom: 0px 0px 4.8px; /* Espace entre l'icône et le texte */
-  }
-  
-  .help .icon {
-    font-size: 36px; /* Augmenter la taille des icônes */
-  }
-  
-  .icon span {
-    margin: 0 10px;
-    font-size: 24px; /* Augmenter la taille du texte */
-  }
-  
-  .vertical-line {
-    height: 30px; /* Hauteur de votre trait vertical */
-    width: 1px; /* Largeur de votre trait vertical */
-    background-color: green; /* Couleur du trait vertical */
-    margin: 0 10px; /* Marge horizontale entre les traits */
-  }
-  
-  .footer {
-    width: 1216px;
-    height: 366.39px;
-    background-color: yellow;
-  }
-  
+
   .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 10px;
   }
-  
-  .footer {
-    width: 100%; /* Utilisation de width au lieu de max-width */
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo-img {
+    width: 50px;
     height: auto;
-    background-color: rgb(0, 0, 0);
+  }
+}
+
+/* Styles pour les petits écrans (téléphones)  TEAM SECTION*/
+@media screen and (max-width: 767px) {
+  /* Réorganiser la mise en page des membres de l'équipe pour les petits écrans */
+  .team-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .logo {
-    width: 200px;
-    height: 82.81px;
-    margin: 0px 128px 32px 0px;
-    color: white;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-img {
-    width: 96px;
-    height: 96px; /* Maintenir une forme carrée */
-    margin-right: 10px; /* Marge entre le logo et le texte */
-  }
-  
-  .logo-text {
-    display: inline-block; /* Pour placer le texte à côté du logo */
-    vertical-align: middle; /* Pour aligner le texte verticalement avec le logo */
-    font-size: 20px; /* Taille de police légèrement plus petite */
-    font-family: "Open Sans", sans-serif;
-    margin-left: 5px; /* Espacement entre le logo et le texte */
-    white-space: nowrap; /* Pour empêcher le texte de se diviser sur plusieurs lignes */
-  }
-  
-  /* =============================PARTIE POUR LES APPAREIL MOBILE ==================== */
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap; /* Permettre le passage à la ligne des éléments enfants */
-    margin: 0px; /* Supprimer la marge pour éviter le débordement horizontal */
-  }
-  
-  .stats .container img {
-    margin-right: 20px; /* Réduire la marge à droite pour espacer les images */
-    margin-bottom: 20px; /* Ajouter une marge en bas pour espacer les images */
-  }
-  
-  .help {
-    width: 100%; /* Utiliser toute la largeur de l'écran */
-    padding: 20px; /* Ajouter un padding pour l'espace intérieur */
-    height: auto; /* Ajuster la hauteur automatiquement */
-    background-color: #ffffff;
-  }
-  
-  .icon img {
-    width: 20px; /* Ajuster la taille de l'icône pour les petits écrans */
-    height: 20px; /* Ajuster la taille de l'icône pour les petits écrans */
-    margin-right: 10px; /* Réduire la marge à droite pour espacer les icônes */
-  }
-  
-  .icon span {
-    font-size: 16px; /* Réduire la taille du texte pour les petits écrans */
-  }
-  
-  .vertical-line {
-    display: none; /* Masquer la ligne verticale pour les petits écrans */
-  }
-  
-  .footer {
-    padding: 10px; /* Réduire le padding pour les petits écrans */
-  }
-  
-  .logo {
-    margin: 0; /* Supprimer la marge pour éviter le débordement horizontal */
-  }
-  
-  .logo-img {
-    width: 50px; /* Ajuster la taille du logo pour les petits écrans */
-    height: auto; /* Ajuster la hauteur automatiquement */
-  }
-  
-  .links ul {
-    list-style-type: none; /* Pour enlever les puces de la liste */
-    padding: 0; /* Pour enlever le padding par défaut */
-  }
-  
-  .links li {
-    margin-bottom: 25px; /* Espacement entre chaque lien */
-  }
-  
-  .links a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white; /* Couleur du lien */
-  }
-  
-  .links a:hover {
-    color: blue; /* Changez la couleur au survol */
-  }
-  
-  .sharing {
-    text-align: center;
-    color: blue;
-  }
-  
-  .sharing .title {
-    width: 196px;
-    height: 36px;
-    margin: 0px 0px 16px;
-    font-size: 19px;
-    font-family: sans-serif;
-    color: white;
-  }
-  
-  .sharing .icons {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 16px; /* Espacement entre la div title et les icônes */
   }
-  
-  .sharing .icons img {
-    width: 30px; /* Ajustez la taille des icônes selon vos besoins */
-    height: 30px; /* Ajustez la taille des icônes selon vos besoins */
-    margin: 0 10px; /* Espacement entre les icônes */
+
+  /* Ajuster l'espace entre les membres de l'équipe */
+  .team-member {
+    flex-basis: 45%; /* Ajustez la largeur des membres selon vos préférences */
+    margin: 10px; /* Ajoutez un espace entre les membres */
   }
-  
-  .input {
-    max-width: 190px;
-    padding: 15px;
-    font-size: 17px;
-    color: black;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    border: 2px solid #fff;
-    margin-right: -10px;
+
+  /* Ajuster la taille de l'image du membre de l'équipe pour les petits écrans */
+  .member-image {
+    width: 100%; /* Remplir la largeur du conteneur parent */
+    height: auto;
   }
-  
-  .button {
-    border: none;
-    background-color: #1363df;
-    text-decoration: none;
-    padding: 15px;
-    padding-bottom: 17px;
-    font-size: 17px;
-    color: #fff;
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    cursor: pointer;
-  }
-  
-  .goal-title {
-    width: 300px;
-    height: 71.81px;
-    color: white;
-    font-size: 14px;
-    font-family: "open sans", sans-serif;
-    margin: 0px 0px 10px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /*padding: 0px;*/
-    }
-  
-    .footer-content {
-      margin-bottom: 10px;
-    }
-  
-    .logo {
-      margin: 0;
-    }
-  
-    .logo-img {
-      width: 50px;
-      height: auto;
-    }
-  }
-  /* =============================FIN DE LA PARTIE POUR LES APPAREIL MOBILE ==================== */
-  
+}
+
+/* =============================FIN DE LA PARTIE POUR LES APPAREIL MOBILE ==================== */

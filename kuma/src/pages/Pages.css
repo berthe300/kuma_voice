@@ -1,0 +1,762 @@
+/*=========CONTRIBUTE.JS====================*/
+.button-container {
+  width: 100%;
+  height: 100%;
+  background-color: #272a2c;
+  margin-top: -20px; /* Pour pousser vers le haut */
+}
+
+.action-button {
+  width: 92.81px;
+  height: 52px;
+  padding: 0px 12px;
+}
+
+.action-button:hover {
+  background-color: #0056b3; /* Couleur de fond des boutons au survol */
+}
+
+.action-button:not(:last-child) {
+  margin-right: 20px; /* Espacement entre les boutons */
+}
+
+.contribution-wrapper {
+  width: 100%;
+  height: 652.57px;
+  margin: -20px auto 20px; /* Ajustez la marge pour pousser vers le haut */
+  overflow-x: hidden; /* Masquer le défilement horizontal */
+  /*background-color: aqua;*/
+}
+
+.contribution-speak {
+  display: flex;
+  /*background-color: blue;*/
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px; /* Pour pousser vers le haut */
+}
+
+.cards-and-pills {
+  display: flex;
+  /* background-color: yellow;*/
+  align-items: center;
+}
+
+.cards-and-instructions {
+  width: 815.99px;
+  height: 256.8px;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph-container {
+  text-align: center;
+}
+
+.pills {
+  width: 272.01px;
+  height: 424.95px;
+  /*background-color: green;
+  /*margin-left: 20px;*/
+  margin-top: 40px;
+}
+
+.texte {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  color: #333;
+  line-height: 1.5;
+  /* Autres styles */
+}
+
+.primary-buttons {
+  /*width: 108.99px;
+  height: 108.99px;*/
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 114px;
+  border: none;
+  background: #1b1b1cde;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.lable {
+  line-height: 20px;
+  font-size: 17px;
+  color: #ff342b;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.primary-buttons:hover {
+  background: #1b1b1c;
+}
+
+.primary-buttons:hover .svg-icon {
+  animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.container {
+  position: relative;
+}
+
+.Btn {
+  position: absolute;
+  top: calc(
+    60% + 20px
+  ); /* Ajustez la valeur pour positionner le bouton en dessous */
+  left: 60;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background: linear-gradient(to right, #8be3fc, #576bff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 20px 30px -7px rgba(97, 118, 238, 0.5);
+  transition-duration: 0.3s;
+}
+
+.svg {
+  width: 12px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  color: transparent;
+}
+
+.Btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.Btn:active {
+  transform: translate(3px, 3px);
+  transition-duration: 0.3s;
+}
+
+/*=================STYLE POUR LE  TELEPHONES================*/
+
+/* Styles pour les écrans de petite taille, comme les téléphones */
+@media only screen and (max-width: 600px) {
+  .contribution-wrapper {
+    overflow-y: hidden; /* Empêcher le défilement vertical */
+  }
+}
+
+/* Styles pour les écrans de petite taille, comme les téléphones */
+@media only screen and (max-width: 600px) {
+  .cards-and-instructions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+    align-items: center; /* Pour centrer horizontalement */
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .paragraph-container {
+    text-align: center; /* Pour centrer le contenu des paragraphes */
+  }
+}
+
+/* Styles pour les écrans de petite taille, comme les téléphones */
+@media only screen and (max-width: 600px) {
+  .pills {
+    display: none; /* Pour cacher le div pills */
+  }
+}
+
+/* Styles pour les écrans de petite taille, comme les téléphones */
+@media only screen and (max-width: 600px) {
+  .Btn {
+    position: absolute;
+    top: calc(
+      100% + 20px
+    ); /* Ajustez la valeur pour positionner le bouton en dessous */
+    left: 0; /* Ajustez la valeur pour positionner le bouton vers la gauche */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background: linear-gradient(to right, #8be3fc, #576bff);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px -7px rgba(97, 118, 238, 0.5);
+    transition-duration: 0.3s;
+  }
+
+  .menu-ouvert .Btn {
+    position: static; /* Rétablir la position par défaut lorsque le menu est ouvert */
+  }
+}
+/*======== FIN STYLE POUR LES ECRANS==================*/
+/*==================FIN DE CONTRIBUTE.JS===================*/
+
+/* ======== CSS DE LA PAGE ABOUT.JS==============*/
+.about-container.about-heading {
+  width: 1537px;
+  height: 60vh;
+  padding: 0px 0px 0px 32px;
+  /*background-color: red;*/
+  display: flex; /* Utilisation de flexbox */
+  justify-content: space-between; /* Pour aligner les éléments sur les extrémités */
+}
+
+.about-header-text {
+  width: 560px;
+  height: 654px;
+  margin-right: 50px;
+  /*background-color: orange;*/
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif, sans-serif;
+}
+.about-header-text h1 {
+  font-size: 50px; /* Taille du titre */
+}
+
+.about-header-text p {
+  font-size: 20; /* Taille des paragraphes */
+}
+
+.about-image {
+  max-width: 100%;
+  height: 100%;
+}
+
+.about-image h1,
+.about-image p {
+  display: none; /* Cacher le h1 sur les grands écrans */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Alignement horizontal au centre */
+  align-items: center; /* Alignement vertical au centre */
+  /* height: 100vh; /* Hauteur équivalente à la hauteur de la fenêtre */
+}
+
+.button1,
+.button2 {
+  margin: 0 10px; /* Ajoute un espace de 10 pixels entre chaque bouton */
+
+  border: none;
+  appearance: none;
+  outline: none;
+  background-color: none; /* Changer la couleur du deuxième bouton */
+}
+.how-it-work {
+  width: 1537px;
+  height: 100%;
+  margin-top: -10px;
+  /*background-color: blue;*/
+}
+.how-it-work-intro {
+  margin: auto; /* Pour centrer horizontalement */
+  width: 1280px;
+  height: 326px;
+  padding: 32px 64px;
+  text-align: center;
+}
+.how-it-work-intro h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+}
+.how-it-work-intro p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.how-it-works-content {
+  width: 1280px;
+  height: 537px;
+  margin: 0 auto;
+  margin: -20px auto 0; /* Ajoutez l'espacement nécessaire en fonction de vos besoins */
+  /*background-color: blue;*/
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
+  /* gap: 10px; /* Espacement entre les blocs */
+}
+
+.how-it-works-blocks {
+  width: 320px;
+  height: 147px;
+  display: flex;
+  flex-direction: column; /* Aligner les éléments verticalement */
+  align-items: center; /* Centrer horizontalement */
+  background-color: #2d2d2e;
+  text-align: center;
+}
+
+.how-it-works-icon {
+  width: 60px;
+  height: 65px;
+  border-radius: 50%; /* Pour obtenir une forme de cercle */
+  background-color: #ffffff; /* Couleur de fond de l'icône */
+  color: #fff; /* Couleur du texte de l'icône */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.how-it-works-icon h3 {
+  width: 240px;
+  height: 23px;
+  margin: 0px 0px 16px;
+  text-align: center; /* Centrer le texte horizontalement */
+}
+
+.how-it-works-icon p {
+  width: 240px;
+  height: 44px;
+  text-align: center; /* Centrer le texte horizontalement */
+}
+
+/*==== PARTIE POUR LES ECRANS=============*/
+/* Media query pour les écrans de taille maximale de 768px (téléphone) */
+@media (max-width: 768px) {
+  .about-container.about-heading {
+    width: calc(100vw - 32px);
+    padding: 0px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-header-text {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-image h1,
+  .about-image p {
+    display: block;
+    font-size: 14px;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .how-it-work-intro {
+    display: none;
+  }
+  .button-container {
+    display: none;
+  }
+
+  .how-it-works-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ajustez selon vos besoins */
+    margin: 0 auto;
+  }
+
+  .how-it-works-blocks {
+    width: 100%; /* Utiliser toute la largeur disponible */
+    display: flex;
+    flex-direction: column; /* Afficher les blocs verticalement */
+    align-items: center; /* Centrer horizontalement */
+    margin-top: 20px; /* Ajouter de la marge en haut pour l'espacement */
+  }
+
+  .how-it-works-blocks .how-it-works-block {
+    width: 100%; /* Utiliser toute la largeur disponible */
+    margin: 10px 0; /* Ajouter de l'espacement en haut et en bas */
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative; /* Position relative pour les icônes absolues */
+  }
+
+  .how-it-works-icon {
+    display: none;
+  }
+
+  .how-it-works-icon h3,
+  .how-it-works-icon p {
+    width: 100%; /* Utiliser toute la largeur disponible */
+    max-width: none; /* Réinitialiser la largeur maximale */
+    text-align: center; /* Centrer le texte horizontalement */
+  }
+}
+/*======================FIN DU CSS POUR LA PARTIE TELEPHONE========*/
+/*=======================FIN DU CSS POUR LA PARTIE ABOUT============*/
+
+/*===================DEBUT DU CSS DE LA PARTIE PARTENAIRE============*/
+body {
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+.container {
+  width: 100%;
+  height: 100vh; /* Utilise la hauteur totale de la fenêtre */
+  display: flex; /* Utilise Flexbox pour aligner les contenus */
+  justify-content: center; /* Centre les contenus horizontalement */
+  align-items: center; /* Centre les contenus verticalement */
+}
+
+/* Assurez-vous que les éléments internes s'adaptent à la largeur de la fenêtre */
+.inner-content {
+  width: 100%;
+}
+.partner-main-container {
+  width: 1537px;
+  /*height: 3100.77px;*/
+  min-height: auto;
+  /*background-color: blue;*/
+}
+
+.partnership-section {
+  width: 1537px;
+  height: 488px;
+  background-image: url("../components/images/patner.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.partnership-container {
+  width: 1216px;
+  height: 488px;
+  display: flex;
+}
+
+.partnership-header-text {
+  width: 566px;
+  height: 423px;
+  /*background-color: rgb(195, 0, 255);*/
+}
+
+.partnership-header-img {
+  width: 610px;
+  height: 463px;
+  display: flex;
+  margin-left: 30px;
+  justify-content: flex-end; /* Aligner le contenu sur la droite */
+}
+
+.partnership-header-text h1 {
+  width: 566px;
+  height: 84px;
+  font-size: 48px;
+  font-family: 'Zilla Slab", "Georgia", "Utopia", "Charter", serif';
+  margin: 48px 0 24px;
+  padding: 36px 0 0;
+}
+
+.partnership-header-text p {
+  width: 566px;
+  height: 99px;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.partnership-header-text h1,
+.partnership-header-text p {
+  margin-left: 70px; /* Ajustez la valeur selon vos besoins */
+}
+
+/*================CSS BOUTTONS CONTACTER=========================== */
+.contactButton {
+  background: #1a619f;
+  color: white;
+  font-family: inherit;
+  padding: 0.5em;
+  padding-left: 1.2em;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 1em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.8em -0.7em #3183ca;
+  overflow: hidden;
+  position: relative;
+  height: 3em;
+  padding-right: 3.5em;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.iconButton {
+  margin-left: 1.2em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 1.2em;
+  box-shadow: 0.15em 0.15em 0.8em 0.3em #324c60;
+  right: 0.4em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.2em 0.2em #1a619f;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.1em 0.1em #228b22;
+}
+/* FIN DE CSS BOUTTON NOUS CONTACTER==========================*/
+
+.ours-partner h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 45px;
+  font-family: "Zilla Slab", "Georgia", "Utopia", "Charter", serif;
+}
+
+.ours-partner-img {
+  width: 1409px;
+  height: auto; /* Pour s'adapter à la hauteur des images */
+  margin: 150px 0px; /* Ajoute une marge de 50 pixels en haut et en bas */
+  display: flex; /* Utilisez Flexbox pour aligner les images horizontalement */
+  flex-wrap: wrap; /* Pour permettre le retour à la ligne des images si elles ne tiennent pas toutes sur une seule ligne */
+  justify-content: space-between; /* Pour répartir les images horizontalement avec un espace égal entre elles */
+}
+
+.image-container {
+  width: calc(
+    50% - 10px
+  ); /* Calculer la largeur de chaque conteneur d'image pour que deux images tiennent sur une ligne avec un espace de 20 pixels entre elles */
+  margin-bottom: 20px; /* Espacement entre chaque conteneur d'image */
+}
+
+.image-wrapper {
+  width: 2210px; /* Largeur fixe du conteneur d'image */
+  height: 2095px; /* Hauteur fixe du conteneur d'image */
+  overflow: hidden; /* Pour cacher le contenu qui dépasse */
+}
+
+.image-wrapper img {
+  width: 100%; /* Ajustez la largeur de chaque image pour qu'elle remplisse son conteneur */
+  height: auto; /* Permettez à l'image de conserver son ratio d'aspect */
+}
+
+.footer {
+  width: 1216px;
+  height: 366.39px;
+  background-color: yellow;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*===============CSS POUR LES TELEPHONES PARTENAIRES=============*/
+@media (max-width: 768px) {
+  .partner-main-container {
+    width: 100%; /* Ajustez la largeur pour occuper toute la largeur de l'écran */
+    /*overflow-x: hidden; /* Empêchez le défilement horizontal */
+  }
+
+  .partnership-section,
+  .partnership-container,
+  .partnership-header-text,
+  .ours-partner h1,
+  .ours-partner-img {
+    width: 100%; /* Ajustez la largeur pour occuper toute la largeur de l'écran */
+  }
+
+  .partnership-section {
+    height: auto; /* Ajustez la hauteur automatiquement pour s'adapter au contenu */
+  }
+
+  .partnership-container {
+    display: block; /* Affichez les éléments en tant que bloc pour les empiler verticalement */
+    width: auto; /* Ajustez la largeur automatiquement pour s'adapter au contenu */
+    height: auto; /* Ajustez la hauteur automatiquement pour s'adapter au contenu */
+  }
+
+  .partnership-header-text h1,
+  .partnership-header-text p {
+    margin-left: 0; /* Réinitialisez la marge gauche */
+    text-align: center; /* Centrez le texte horizontalement */
+  }
+
+  .ours-partner-img {
+    margin: 50px 0; /* Ajoutez de l'espace autour des images */
+    flex-direction: column; /* Affichez les images en colonnes */
+    align-items: center; /* Centrez les images horizontalement */
+  }
+
+  .image-container {
+    width: 100%; /* Ajustez la largeur pour occuper toute la largeur de l'écran */
+  }
+}
+/* ===================FIN DE CSS DE LA PARTIE PARTENAIRES=============*/
+
+
+/* ===================DEBUT DE CSS DE LA PARTIE LANGUES=============*/
+
+
+
+.language-section-heading h3{
+  font-size: 20px;
+  font-family: serif;
+
+}
+.languageCardcontent {
+  width: 100%; /* Pour occuper la largeur totale de son conteneur */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+  grid-gap: 16px; /* Espace entre les éléments */
+}
+
+
+
+.languageCardHeading {
+  width: 362.66px;
+  height: 29px;
+  font-size: 24px;
+  margin: 0px 0px 24px;
+  font-family:'Zilla Slab", "Georgia", "Utopia", "Charter", serif'; ;
+}
+
+.Data {
+  width: 362.66px;
+  height:100%;
+  background-color: #191a1b;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.DataItemHeadingIcon--tW9fa {
+  width: 16px;
+  height: 16px;
+  fill: #000; /* Couleur de remplissage de l'icône */
+  margin-right: 10px; /* Marge à droite pour séparer l'icône du texte */
+}
+
+.link {
+  width: 100%;
+  height: 54px;
+  display: flex; /* Utiliser Flexbox pour aligner le contenu */
+  justify-content: center; /* Centrer le contenu horizontalement */
+  align-items: center; /* Centrer le contenu verticalement */
+  background-color: #1767c3;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+.DataItem {
+  width: 165.33px;
+  height: 66.59px;
+ /* background-color: #e8e6e3 !important; /* Couleur de fond du DataItem */
+  margin-bottom: 10px; /* Marge autour du DataItem */
+}
+.DataItem p{
+  font-size: 24px;
+  font-weight: 300;
+  line-height: var(--font-size-lg);
+  font-family:"open sans",sans-serif;
+  margin-left: 30px;
+}
+.DataItem h4 {
+  color: #ffffff; /* Couleur du texte */
+  font-size: 20px; /* Taille de la police */
+}
+
+h4 {
+  width: 165.33px; /* Largeur du titre */
+  height: 20.09px; /* Hauteur du titre */
+  margin: 0; /* Supprimer les marges par défaut */
+  padding: 0; /* Supprimer le remplissage par défaut */
+  font-size: 14px; /* Taille de la police du titre */
+  line-height: 20.09px; /* Hauteur de la ligne du titre */
+  display: flex; /* Utiliser Flexbox pour aligner le texte et l'icône */
+  align-items: center; /* Aligner le texte et l'icône verticalement */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .languageCardcontent {
+    grid-template-columns: 1fr; /* Une colonne pour les écrans de largeur inférieure à 768px */
+  }
+
+  .Data {
+    flex-direction: column; /* Afficher les éléments en colonne */
+  }
+}
+
+
+/* ===================FIN DE CSS DE LA PARTIE LANGUES=============*/

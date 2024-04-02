@@ -3,14 +3,83 @@ import { FaCopy, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { FaUser, FaComment, FaEnvelope } from "react-icons/fa"; // Importez les icônes nécessaires depuis react-icons
 import "./HomePage.css";
 import img from "./images/image3.png";
+import team01 from "./images/team-01.png"
+import team02 from "./images/team-02.jpg"
+import team04 from "./images/team-04.png"
+import berthe from "./images/berthe.jpg"
 
-const HomePage = () => {
+
+// Définition du composant TeamSection
+const TeamSection = () => {
+  // Tableau de données des membres de l'équipe (nom, image, liens sociaux)
+  const teamMembers = [
+      {
+          name: "Mouhamed Traore",
+          image: team01, // Chemin de l'image
+          socialLinks: {
+              twitter: "https://twitter.com/johndoe",
+              linkedin: "https://www.linkedin.com/in/johndoe",
+              // Ajoutez d'autres liens sociaux au besoin
+          }
+      },
+      {
+        name: "Malamine Diabira",
+        image: team02, // Chemin de l'image
+        socialLinks: {
+            twitter: "https://twitter.com/johndoe",
+            linkedin: "https://www.linkedin.com/in/johndoe",
+            // Ajoutez d'autres liens sociaux au besoin
+        }
+    },
+    {
+      name: "Ibrahim Berthe",
+      image: berthe, // Chemin de l'image
+      socialLinks: {
+          twitter: "https://twitter.com/johndoe",
+          linkedin: "https://www.linkedin.com/in/johndoe",
+          // Ajoutez d'autres liens sociaux au besoin
+      }
+  },
+  {
+    name: "Hawa Gafou",
+    image: team04, // Chemin de l'image
+    socialLinks: {
+        twitter: "https://twitter.com/johndoe",
+        linkedin: "https://www.linkedin.com/in/johndoe",
+        // Ajoutez d'autres liens sociaux au besoin
+    }
+},
+      // Ajoutez d'autres membres de l'équipe au besoin
+  ];
+
+  return (
+      <div className="team-section">
+          {teamMembers.map((member, index) => (
+              <div className="team-member" key={index}>
+                  <img src={member.image} alt={member.name} className="member-image" />
+                  <h3 className="member-name">{member.name}</h3>
+                  <div className="social-links">
+                      {/* Affiche les liens sociaux pour chaque membre */}
+                      {Object.entries(member.socialLinks).map(([socialPlatform, link]) => (
+                          <a href={link} key={socialPlatform} className={`social-link ${socialPlatform}`}>
+                              {socialPlatform}
+                          </a>
+                      ))}
+                  </div>
+              </div>
+          ))}
+      </div>
+  );
+};
+
+function HomePage() {
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {
     setShowMore(!showMore);
   };
-
+  
+  
   return (
     <div className="home-page">
       <div className="hero-multiple">
@@ -220,6 +289,12 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* CODE DE LA PARTIE OUR TEAM*/}
+      <h2>NOTRE EQUIPE</h2>
+      <p>Contacter nos groupes </p>
+      <TeamSection />
+      {/* FIN DE CODE DE LA PARTIE OUR TEAM*/}
+
       {/**============================FOOTER======================== */}
 
       <div className="footer-content">
@@ -320,6 +395,6 @@ const HomePage = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default HomePage;
