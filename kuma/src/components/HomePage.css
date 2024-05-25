@@ -44,15 +44,15 @@
 .hero-box.speak {
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: cover;
-  background-image: url("/assets/image/true.png"); /* Ajoutez le chemin vers votre première image */
+  background-size: 100%;
+  background-image: url("/assets/image/speak.svg"); /* Ajoutez le chemin vers votre première image */
 }
 
 .hero-box.listen {
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: cover;
-  background-image: url("/assets/image/tre.png"); /* Ajoutez le chemin vers votre deuxième image */
+  background-size: 100%;
+  background-image: url("/assets/image/listen.svg"); /* Ajoutez le chemin vers votre deuxième image */
 }
 
 .hero-multiple {

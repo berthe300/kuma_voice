@@ -1,13 +1,12 @@
 // index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';  
-import '../src/components/Navbar.css';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "../src/components/Navbar.css";
 
 ReactDOM.render(
   <React.StrictMode>
-<App />
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

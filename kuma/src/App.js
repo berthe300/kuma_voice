@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './pages/About'; // Importez la page AboutPage
+import React, { Component } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
 import Contribute from "./pages/Contribute";
 import Datasets from "./pages/Datasets";
 import Language from "./pages/Languages";
 import Partenaire from "./pages/Partenaire";
 import Login from "./pages/Login";
-import Signp from "./pages/Signp"
-import AppNavbar from './components/Navbar';
-import HomePage from './components/HomePage';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Importez AppRouter
+import Signp from "./pages/Signp";
+import AppNavbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n"; // Importez AppRouter
+import Listen from "./pages/Listen";
+import Write from "./pages/Write";
 
 class App extends Component {
   constructor(props) {
@@ -19,12 +21,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const handler = e => this.setState({ matches: e.matches });
-    window.matchMedia("(min-width: 768px)").addEventListener('change', handler);
+    const handler = (e) => this.setState({ matches: e.matches });
+    window.matchMedia("(min-width: 768px)").addEventListener("change", handler);
   }
 
   componentWillUnmount() {
-    window.matchMedia("(min-width: 768px)").removeEventListener('change', this.handler);
+    window
+      .matchMedia("(min-width: 768px)")
+      .removeEventListener("change", this.handler);
   }
 
   render() {
@@ -33,6 +37,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <AppNavbar />
+
             <main>
               <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -41,8 +46,10 @@ class App extends Component {
                 <Route path="/Datasets" element={<Datasets />} />
                 <Route path="/Languages" element={<Language />} />
                 <Route path="/Partenaire" element={<Partenaire />} />
-                <Route path='/Login' element={<Login />} />
-                <Route path='/Signp' element={<Signp />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Signp" element={<Signp />} />
+                <Route path="/Listen" element={<Listen />} />
+                <Route path="Write" element={<Write />} />
               </Routes>
             </main>
           </div>

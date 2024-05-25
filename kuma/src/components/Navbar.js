@@ -28,7 +28,7 @@ const AppNavbar = () => {
             <div className="nav-login-container">
               <div className="user-icon-container"></div>
               {/*<Nav.Link href="/Login">{t("login")}</Nav.Link>*/}
-              <Nav.Link href="Signp">{t("Register")}</Nav.Link>
+              <Nav.Link href="Signp">{t("login")}</Nav.Link>
             </div>
           </div>
         </Nav>

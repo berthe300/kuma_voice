@@ -22,25 +22,24 @@ function Partenaire() {
               Want to partner with us? We'd love to hear from you. Get in touch
             </p>
             <button class="contactButton">
-          Nous contacter
-            <div class="iconButton">
-              <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                  d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-          </button>
-
+              Nous contacter
+              <div class="iconButton">
+                <svg
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </div>
-          
+
           <div class="partnership-header-img">
             <img src={img} alt="" />
           </div>
@@ -65,7 +64,6 @@ function Partenaire() {
           <img src={part6} alt="" />
         </div>
       </div>
-
 
       <div className="footer-content">
         <div className="help">

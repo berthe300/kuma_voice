@@ -1,23 +1,52 @@
 /*=========CONTRIBUTE.JS====================*/
 .button-container {
-  width: 100%;
-  height: 100%;
-  background-color: #272a2c;
-  margin-top: -20px; /* Pour pousser vers le haut */
+  display: flex;
+  /* background-color: #f30707;*/
+  justify-content: center; /* Centrer horizontalement les boutons */
+  gap: 20px; /* Espacement horizontal entre les boutons */
 }
 
-.action-button {
-  width: 92.81px;
-  height: 52px;
-  padding: 0px 12px;
+.button-container .button1 {
+  display: inline-block; /* Afficher comme un élément en ligne de type bloc */
+  background-color: #047fb8; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 15px 30px; /* Padding pour agrandir le bouton */
+  border: none; /* Supprimer les bordures */
+  border-radius: 12px; /* Coins arrondis */
+  font-size: 18px; /* Taille de la police */
+  text-decoration: none; /* Supprimer le soulignement */
+  text-align: center; /* Centrer le texte */
+  cursor: pointer; /* Curseur en pointeur au survol */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
 }
-
-.action-button:hover {
-  background-color: #0056b3; /* Couleur de fond des boutons au survol */
+.button-container .button1:hover {
+  background-color: #bd2e2e; /* Couleur de fond au survol */
 }
-
-.action-button:not(:last-child) {
-  margin-right: 20px; /* Espacement entre les boutons */
+.button-container .button2 {
+  display: inline-block; /* Afficher comme un élément en ligne de type bloc */
+  background-color: #047fb8; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 15px 30px; /* Padding pour agrandir le bouton */
+  border: none; /* Supprimer les bordures */
+  border-radius: 12px; /* Coins arrondis */
+  font-size: 18px; /* Taille de la police */
+  text-decoration: none; /* Supprimer le soulignement */
+  text-align: center; /* Centrer le texte */
+  cursor: pointer; /* Curseur en pointeur au survol */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+.button-container .button3 {
+  display: inline-block; /* Afficher comme un élément en ligne de type bloc */
+  background-color: #047fb8; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 15px 30px; /* Padding pour agrandir le bouton */
+  border: none; /* Supprimer les bordures */
+  border-radius: 12px; /* Coins arrondis */
+  font-size: 18px; /* Taille de la police */
+  text-decoration: none; /* Supprimer le soulignement */
+  text-align: center; /* Centrer le texte */
+  cursor: pointer; /* Curseur en pointeur au survol */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
 }
 
 .contribution-wrapper {
@@ -25,15 +54,23 @@
   height: 652.57px;
   margin: -20px auto 20px; /* Ajustez la marge pour pousser vers le haut */
   overflow-x: hidden; /* Masquer le défilement horizontal */
+  /*background-color: rgb(12, 171, 233); /* Couleur de fond */
+  background-image: url("../components/images/speak.svg"); /* Image de fond */
+  background-size: 100%; /* Redimensionner l'image pour remplir le conteneur */
+  background-position: center bottom; /* Positionner l'image centrée horizontalement et en bas verticalement */
+  background-repeat: no-repeat; /* Empêcher la répétition de l'image */
   /*background-color: aqua;*/
 }
-
+.contribution-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contribution-speak {
   display: flex;
-  /*background-color: blue;*/
   align-items: center;
   justify-content: center;
-  margin-top: -20px; /* Pour pousser vers le haut */
+  margin-top: -300px; /* Réduire l'espacement vers le haut */
 }
 
 .cards-and-pills {
@@ -43,6 +80,7 @@
 }
 
 .cards-and-instructions {
+  position: relative; /* Ajouter cette ligne */
   width: 815.99px;
   height: 256.8px;
   background-color: rgb(247, 247, 247);
@@ -51,87 +89,10 @@
   align-items: center;
 }
 
-.paragraph-container {
-  text-align: center;
-}
-
-.pills {
-  width: 272.01px;
-  height: 424.95px;
-  /*background-color: green;
-  /*margin-left: 20px;*/
-  margin-top: 40px;
-}
-
-.texte {
-  font-family: Arial, sans-serif;
-  font-size: 25px;
-  color: #333;
-  line-height: 1.5;
-  /* Autres styles */
-}
-
-.primary-buttons {
-  /*width: 108.99px;
-  height: 108.99px;*/
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: red;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px 12px;
-  gap: 8px;
-  height: 40px;
-  width: 114px;
-  border: none;
-  background: #1b1b1cde;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.lable {
-  line-height: 20px;
-  font-size: 17px;
-  color: #ff342b;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-}
-
-.primary-buttons:hover {
-  background: #1b1b1c;
-}
-
-.primary-buttons:hover .svg-icon {
-  animation: scale 2s linear infinite;
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05) rotate(10deg);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-.container {
-  position: relative;
-}
-
 .Btn {
   position: absolute;
-  top: calc(
-    60% + 20px
-  ); /* Ajustez la valeur pour positionner le bouton en dessous */
-  left: 60;
+  bottom: 10px; /* Ajuster la marge inférieure selon vos besoins */
+  right: 10px; /* Ajuster la marge droite selon vos besoins */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -147,6 +108,137 @@
   border-radius: 12px;
   box-shadow: 0 20px 30px -7px rgba(97, 118, 238, 0.5);
   transition-duration: 0.3s;
+}
+.enregistrement {
+  position: absolute;
+  top: 450px; /* Ajustez la distance vers le haut selon vos besoins */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center; /* Pour centrer les boutons horizontalement */
+  align-items: center; /* Pour centrer verticalement */
+  gap: 20px; /* Espace entre les boutons */
+}
+
+.enregistrement .button-recording {
+  width: 100px; /* Largeur du bouton */
+  height: 100px; /* Hauteur du bouton */
+  border-radius: 50%; /* Pour rendre les boutons circulaires */
+  display: flex;
+  justify-content: center; /* Pour centrer le texte horizontalement */
+  align-items: center; /* Pour centrer le texte verticalement */
+  border: none; /* Optionnel : supprimer la bordure par défaut */
+  background-color: #14aee1; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  font-size: 20px; /* Taille du texte */
+  text-align: center; /* Centre le texte pour les textes plus longs */
+  padding: 10px; /* Espace à l'intérieur du bouton */
+  background-color: rgba(2, 180, 245, 0.689);
+}
+.enregistrement .button-recording:hover {
+  background-color: rgb(7, 125, 221);
+}
+.enregistrement .button-stop-recording {
+  width: 100px; /* Largeur du bouton */
+  height: 100px; /* Hauteur du bouton */
+  border-radius: 50%; /* Pour rendre les boutons circulaires */
+  display: flex;
+  justify-content: center; /* Pour centrer le texte horizontalement */
+  align-items: center; /* Pour centrer le texte verticalement */
+  border: none; /* Optionnel : supprimer la bordure par défaut */
+  background-color: #14aee1; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  font-size: 20px; /* Taille du texte */
+  text-align: center; /* Centre le texte pour les textes plus longs */
+  padding: 10px; /* Espace à l'intérieur du bouton */
+  background-color: rgba(234, 6, 6, 0.689);
+}
+.enregistrement .button-stop-recording:hover {
+  background-color: rgb(214, 25, 15);
+}
+
+.bSupValid {
+  display: flex;
+  flex-direction: column;
+  height: 200px; /* Ajustez selon vos besoins */
+  border: 1px solid #ccc; /* Bordure pour visualiser le conteneur */
+  padding: 10px;
+}
+
+.bSupValid audio {
+  width: 100%;
+  margin-bottom: 5px; /* Réduisez cet espace pour minimiser la distance */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centrer les boutons horizontalement */
+  gap: 10px; /* Espacement horizontal entre les boutons */
+  margin-top: auto; /* Pousse le conteneur des boutons vers le bas */
+}
+
+.buttons button {
+  padding: 10px; /* Padding pour les boutons */
+  border: none; /* Supprimer les bordures par défaut */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 14px; /* Taille du texte */
+  cursor: pointer; /* Curseur en pointeur au survol */
+  transition: background-color 0.3s ease; /* Transition pour l'effet au survol */
+}
+
+.delete-button {
+  background-color: #ff4d4d; /* Couleur de fond pour le bouton supprimer */
+  color: white; /* Couleur du texte */
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a; /* Couleur de fond au survol */
+}
+
+.validate-button {
+  background-color: #4caf50; /* Couleur de fond pour le bouton valider */
+  color: white; /* Couleur du texte */
+}
+
+.validate-button:hover {
+  background-color: #45a049; /* Couleur de fond au survol */
+}
+
+.paragraph-container {
+  text-align: center;
+}
+
+.pills {
+  width: 272.01px;
+  height: 424.95px;
+  /*background-color: green;
+  /*margin-left: 20px;*/
+  margin-top: 40px;
+  background-color: #1a619f;
+}
+
+.texte {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  color: #333;
+  line-height: 1.5;
+  /* Autres styles */
+}
+
+.container {
+  position: relative;
+}
+
+.cards-and-instructions {
+  position: relative; /* Ajouter cette ligne */
+  width: 815.99px;
+  height: 256.8px;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Ajouter ces lignes */
+  position: relative;
 }
 
 .svg {
@@ -242,6 +334,102 @@
 }
 /*======== FIN STYLE POUR LES ECRANS==================*/
 /*==================FIN DE CONTRIBUTE.JS===================*/
+
+/*====================CSS DE LA PARTIE LISTEN================*/
+.controls {
+  display: flex; /* Utiliser Flexbox pour l'alignement */
+  justify-content: flex-start; /* Aligner les éléments à gauche */
+  margin-top: 20px;
+  justify-content: center; /* Centrer horizontalement les éléments */
+}
+
+.button-play {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+  margin-left: -800px; /* Place la div en bas de son conteneur */
+}
+
+.button-play:hover {
+  background-color: #218838;
+}
+
+/*====================FIN DE CSS DE LA PARTIE LISTEN=================*/
+/*=====================DEBUT DE CSS DE LA PARTIE WRITE================*/
+.contribution-wrapper-writen {
+  width: 100%;
+  height: 652.57px;
+  margin: -20px auto 20px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../components/images/speak.svg"); /* Chemin mis à jour */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.cards-and-instructions-writen {
+  position: relative;
+  width: 815.99px;
+  height: 256.8px;
+  background-color: rgb(247, 247, 247);
+  /* display: flex; */
+  align-content: space-around;
+  margin-top: -260px;
+}
+
+.select-language {
+  position: absolute;
+  bottom: 20px;
+  width: 50%;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button-validate,
+.button-accept {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+  margin-top: 10px; /* Ajoutez cette ligne pour pousser les boutons vers le bas */
+  transition: background-color 0.3s;
+}
+.button-validate:hover,
+.button-accept:hover {
+  background-color: #218838;
+}
+
+.texte-writen {
+  width: 100%;
+  height: calc(
+    100% - 60px
+  ); /* Adjust height to leave space for the language select and buttons */
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+/*=====================FIN DE CEE LA PARTIE DE WRITE==============*/
 
 /* ======== CSS DE LA PAGE ABOUT.JS==============*/
 .about-container.about-heading {
@@ -662,15 +850,11 @@ body {
 }
 /* ===================FIN DE CSS DE LA PARTIE PARTENAIRES=============*/
 
-
 /* ===================DEBUT DE CSS DE LA PARTIE LANGUES=============*/
 
-
-
-.language-section-heading h3{
+.language-section-heading h3 {
   font-size: 20px;
   font-family: serif;
-
 }
 .languageCardcontent {
   width: 100%; /* Pour occuper la largeur totale de son conteneur */
@@ -679,19 +863,17 @@ body {
   grid-gap: 16px; /* Espace entre les éléments */
 }
 
-
-
 .languageCardHeading {
   width: 362.66px;
   height: 29px;
   font-size: 24px;
   margin: 0px 0px 24px;
-  font-family:'Zilla Slab", "Georgia", "Utopia", "Charter", serif'; ;
+  font-family: 'Zilla Slab", "Georgia", "Utopia", "Charter", serif';
 }
 
 .Data {
   width: 362.66px;
-  height:100%;
+  height: 100%;
   background-color: #191a1b;
   display: flex;
   flex-wrap: wrap;
@@ -716,18 +898,17 @@ body {
   text-decoration: none;
 }
 
-
 .DataItem {
   width: 165.33px;
   height: 66.59px;
- /* background-color: #e8e6e3 !important; /* Couleur de fond du DataItem */
+  /* background-color: #e8e6e3 !important; /* Couleur de fond du DataItem */
   margin-bottom: 10px; /* Marge autour du DataItem */
 }
-.DataItem p{
+.DataItem p {
   font-size: 24px;
   font-weight: 300;
   line-height: var(--font-size-lg);
-  font-family:"open sans",sans-serif;
+  font-family: "open sans", sans-serif;
   margin-left: 30px;
 }
 .DataItem h4 {
@@ -746,8 +927,6 @@ h4 {
   align-items: center; /* Aligner le texte et l'icône verticalement */
 }
 
-
-
 @media screen and (max-width: 768px) {
   .languageCardcontent {
     grid-template-columns: 1fr; /* Une colonne pour les écrans de largeur inférieure à 768px */
@@ -757,6 +936,5 @@ h4 {
     flex-direction: column; /* Afficher les éléments en colonne */
   }
 }
-
 
 /* ===================FIN DE CSS DE LA PARTIE LANGUES=============*/
