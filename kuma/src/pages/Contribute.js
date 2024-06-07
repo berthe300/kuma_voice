@@ -85,7 +85,7 @@ const Recorder = () => {
             </button>
             <button
               className="validate-button"
-              ob  nClick={() => validateRecording(index)}
+              onClick={() => validateRecording(index)}
             >
               Valider
             </button>

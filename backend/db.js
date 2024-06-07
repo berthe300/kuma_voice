@@ -1,4 +1,3 @@
-// db.js
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
@@ -9,7 +8,10 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-  if (err) throw err;
+  if (err) {
+    console.error('Error connecting to the database:', err);
+    return;
+  }
   console.log('Connected to the database');
 });
 

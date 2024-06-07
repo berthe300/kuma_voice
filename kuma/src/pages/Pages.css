@@ -938,3 +938,20 @@ h4 {
 }
 
 /* ===================FIN DE CSS DE LA PARTIE LANGUES=============*/
+
+
+
+/* ====================== CSS DE LA PARTIE DE MON SITE WEB ============================ */
+/* Styles pour le thème clair */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+
+/* ============================ FIN DU PARTIE DE LA CSS DE MON SITE WEB ==================== */

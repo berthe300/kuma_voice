@@ -1,41 +1,33 @@
-const express = require("express");
+const express = require('express');
+const multer = require('multer');
+const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Middleware pour parser le JSON
-app.use(express.json());
-
-const cors = require("cors");
-const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions)); // Use this after the variable declaration
-
-// Middleware pour autoriser les requêtes CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
+// Configuration de multer pour spécifier le répertoire de stockage des fichiers
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'audio/'); // Spécifie le répertoire de destination des fichiers
+  },
+  filename: function (req, file, cb) {
+    // Spécifie le nom du fichier une fois qu'il est téléversé
+    cb(null, Date.now() + path.extname(file.originalname));
   }
-  next();
 });
 
-// Routes API
-app.use("/recordings", require("./routes/recordings"));
+const upload = multer({ storage: storage });
 
-app.get("/", (req, res) => {
-  res.send("Server is running");
+// Route POST pour gérer le téléversement de fichiers audio
+app.post('/upload', upload.single('audio'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send('Aucun fichier audio n\'a été téléversé');
+  }
+  res.send('Fichier audio téléversé avec succès');
 });
 
+// Autres routes et configurations...
+
+// Démarrer le serveur
+const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Serveur en écoute sur le port ${PORT}`);
 });
