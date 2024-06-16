@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { Nav } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./Pages.css";
-
 import { sendAudioToAPI } from "./api"; // Chemin relatif au fichier api.js
-
-// Reste du code du composant Contribute
-
 import { Button } from "react-bootstrap";
 import { ReactMic } from "react-mic";
 
@@ -28,7 +24,7 @@ const Recorder = () => {
   };
 
   const onStop = (recordedBlob) => {
-    setRecordings([...recordings, recordedBlob.blobURL]);
+    setRecordings([...recordings, recordedBlob]);
   };
 
   const deleteRecording = (index) => {
@@ -41,10 +37,9 @@ const Recorder = () => {
     try {
       setShowValidationMessage(true);
       const audioData = recordings[index]; // Récupération de l'enregistrement audio
-      await sendAudioToAPI(audioData); // Envoi de l'enregistrement audio à l'API
+      const response = await sendAudioToAPI(audioData.blob); // Envoi de l'enregistrement audio à l'API
 
-      // Vous pouvez supprimer cette console.log car nous avons déjà le console.error dans le catch
-      console.log("Recording validated:", audioData);
+      console.log("Recording validated:", response);
     } catch (error) {
       console.error("Error validating recording:", error);
     }
@@ -75,7 +70,7 @@ const Recorder = () => {
       />
       {recordings.map((recording, index) => (
         <div className="bSupValid" key={index}>
-          <audio controls src={recording}></audio>
+          <audio controls src={recording.blobURL}></audio>
           <div className="buttons">
             <button
               className="delete-button"
@@ -92,7 +87,7 @@ const Recorder = () => {
           </div>
         </div>
       ))}
-      {showValidationMessage && (    
+      {showValidationMessage && (
         <div className="validation-message">
           Enregistrement validé avec succès !
         </div>
@@ -100,7 +95,6 @@ const Recorder = () => {
     </div>
   );
 };
-
 
 function Contribute() {
   const [index, setIndex] = useState(0);
@@ -122,7 +116,6 @@ function Contribute() {
 
   return (
     <div>
-      {/* Div contenant les boutons */}
       <div className="button-container">
         <Nav.Link href="/Contribute" className="button1">
           {t("bSpeak")}

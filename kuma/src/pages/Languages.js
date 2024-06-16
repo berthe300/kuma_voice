@@ -80,8 +80,8 @@ function Languages() {
             </h4>
             <p>258656</p>
           </div>
-          <a href="t" class="link">
-            CONTRIBUER
+          <a href="Listen" class="link">
+            BOLOMAFARADI
           </a>
         </div>
 
@@ -151,7 +151,7 @@ function Languages() {
             </h4>
             <p>20%</p>
           </div>
-          <a href="t" class="link">
+          <a href="Maneka" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -222,7 +222,7 @@ function Languages() {
             </h4>
             <p>896574</p>
           </div>
-          <a href="t" class="link">
+          <a href="Fulla" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -293,7 +293,7 @@ function Languages() {
             </h4>
             <p>854969</p>
           </div>
-          <a href="t" class="link">
+          <a href="Maraka" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -364,7 +364,7 @@ function Languages() {
             </h4>
             <p>879456</p>
           </div>
-          <a href="t" class="link">
+          <a href="Senofo" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -435,7 +435,7 @@ function Languages() {
             </h4>
             <p>4596</p>
           </div>
-          <a href="t" class="link">
+          <a href="Dogon" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -506,7 +506,7 @@ function Languages() {
             </h4>
             <p>45621</p>
           </div>
-          <a href="t" class="link">
+          <a href="Souraka" class="link">
             CONTRIBUER
           </a>
         </div>
@@ -577,13 +577,13 @@ function Languages() {
             </h4>
             <p>1143</p>
           </div>
-          <a href="t" class="link">
+          <a href="Bozo" class="link">
             CONTRIBUER
           </a>
         </div>
 
         <div class="Data">
-          <h3 class="languageCardHeading">Somono</h3>
+          <h3 class="languageCardHeading">Kassongue</h3>
           <div class="DataItem">
             <h4>
               <svg
@@ -648,7 +648,7 @@ function Languages() {
             </h4>
             <p>1143</p>
           </div>
-          <a href="t" class="link">
+          <a href="Kassongue" class="link">
             CONTRIBUER
           </a>
         </div>

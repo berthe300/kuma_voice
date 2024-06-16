@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Nav } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import "./Pages.css";
+import "../Pages.css";
 
-const Listen = () => {
+const Fulla = () => {
   const [index, setIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const { t } = useTranslation();
@@ -129,4 +129,4 @@ const Listen = () => {
   );
 };
 
-export default Listen;
+export default Fulla;

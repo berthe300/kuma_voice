@@ -22,7 +22,7 @@ const AppNavbar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto flex-grow-1 justify-content-between">
           <Nav.Link href="/Contribute" className="nav-link-spaced">{t("contribute")}</Nav.Link>
-          <Nav.Link href="/Datasets" className="nav-link-spaced">{t("datasets")}</Nav.Link>
+          {/*<Nav.Link href="/Datasets" className="nav-link-spaced">{t("datasets")}</Nav.Link>*/}
           <Nav.Link href="/Languages" className="nav-link-spaced">{t("languages")}</Nav.Link>
           <Nav.Link href="/Partenaire" className="nav-link-spaced">{t("becomePartner")}</Nav.Link>
           <Nav.Link href="/About" className="nav-link-spaced">{t("about")}</Nav.Link>
